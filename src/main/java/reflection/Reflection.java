@@ -15,19 +15,19 @@ public class Reflection extends Student{
         field.set(student,"2000");
         System.out.println(field.get(student));
 
-        Field[] fields = Student.class.getDeclaredFields();
+        Field[] fields = String.class.getDeclaredFields();
 
         for (Field f : fields) {
             f.setAccessible(true);
             System.out.println(f.getName());
         }
 
-        Method[] methods = Student.class.getDeclaredMethods();
+       /* Method[] methods = Student.class.getDeclaredMethods();
 
         for (Method m : methods) {
             m.setAccessible(true);
             System.out.println(m.getName());
             System.out.println(m.invoke(student,null));
-        }
+        }*/
     }
 }
